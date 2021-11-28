@@ -10,13 +10,11 @@
 import pandas as pd
 import os
 
-FOLDER = 'Исходные данные'
 FILE_NAME = 'Анализ МО по компании.xlsx'
 NEW_FILE_NAME = 'Загрузка МО по компании.xlsx'
 
 def Run ():
-    file_name = FOLDER + "/" + FILE_NAME # Путь к фалйу
-    df_result = create_df(file_name) # Загружаем и подготавливаем DataFrame
+    df_result = create_df(FILE_NAME) # Загружаем и подготавливаем DataFrame
     df_write_xlsx(df_result) # Записываем в эксель
 
 def create_df (file):
